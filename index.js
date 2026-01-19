@@ -1,7 +1,11 @@
 const express = require('express');
+const morgan = require('morgan');
 const cors = require('cors');
 const app = express();
 const port = 3000;
+
+// 開発向けの 'dev' フォーマット
+app.use(morgan('dev'));
 
 // JSONデータを扱うためのミドルウェア
 app.use(express.json());
